@@ -2,25 +2,19 @@ var Clock = require('./../js/clock.js').clockModule;
 
 var displayTime = function(Time) {
   $("#current-time").text(Time);
-  // setTimeout(function(){$('#time-we-want').val(Time)}, 20);
-
   $('#time-we-want').val(Time);
-  // console.log(Time);
 };
-var something = function(alarmResponse){
+var alarmTrigger = function(){
 
-  $('.alarm').text(alarmResponse);
+  $('.alarm').append('<h1> IT WENT OFF. DO THE THING <br><img src="https://media.tenor.co/images/13891bcd44f7fea4b3fcfe7d4dd05a00/raw" alt="Cute Goat"><br><img src="https://media.tenor.co/images/089ebe090b9e6f45e82870a36708483e/raw" alt="Cute Goat"><br><img src="https://media.tenor.co/images/b542e2789316f637077d14c3b7af3b6d/raw" alt="Goat jump"><audio controls autoplay><source src="./01-the-screaming-sheep.mp3" type="audio/mp3"></audio></h1>');
 };
 
 $(document).ready(function(){
   var clock = new Clock();
-  var currentTime = clock.getLocalTime(displayTime);
-  // var alarmTime;
+  clock.getLocalTime(displayTime);
   $('#alarm').submit(function(event){
-    var alarmTime = 0;
     event.preventDefault();
     var alarmTime = $('#alarm-time').val();
-    console.log(alarmTime);
-    var checkTime = clock.alarm(alarmTime, something);
+    clock.alarm(alarmTime, alarmTrigger);
   });
 });

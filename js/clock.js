@@ -15,12 +15,12 @@ Clock.prototype.getLocalTime = function(displayTime) {
   }, 1000);
 };
 
-Clock.prototype.alarm = function(alarmTime, something) {
+Clock.prototype.alarm = function(alarmTime, alarmTrigger) {
+  var stop = 1;
   setInterval(function() {
-    console.log(moment().format('HH:mm'));
-    console.log(alarmTime);
-    if (alarmTime == moment().format('HH:mm')){
-      something('IT WENT OFF. DO THE THING')
+    if ((alarmTime == moment().format('HH:mm')) && stop < 2){
+      alarmTrigger();
+      stop ++;
     };
   }, 1000);
 };
