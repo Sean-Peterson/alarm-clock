@@ -22,7 +22,7 @@ _A web app that will display current time and allow users to set and view alarms
 
 * Set up your unique time API key by visiting https://timezonedb.com/ and signing up for a free account. Create a `.env` file in the top level project directory and enter in your API key as: `exports.apiKey = 'yourKeyHere';`.
 * Run `npm install` and `bower install` to install all dependencies as listed in the package.json and bower.json files for project.
-* Run command `gulp serve` to start local server.
+* Run command `gulp build` and `gulp serve` to start local server.
 * Open `index.html` in web browser (Chrome recommended).
 
 ## Known Bugs
