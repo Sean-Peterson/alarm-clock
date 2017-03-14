@@ -21,7 +21,7 @@ Clock.prototype.alarm = function(alarmTime, alarmTrigger) {
     if ((alarmTime == moment().format('HH:mm')) && stop < 2){
       alarmTrigger();
       stop ++;
-    };
+    } 
   }, 1000);
 };
 
