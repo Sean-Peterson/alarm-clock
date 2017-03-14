@@ -15,4 +15,14 @@ Clock.prototype.getLocalTime = function(displayTime) {
   }, 1000);
 };
 
+Clock.prototype.alarm = function(alarmTime, something) {
+  setInterval(function() {
+    console.log(moment().format('HH:mm'));
+    console.log(alarmTime);
+    if (alarmTime == moment().format('HH:mm')){
+      something('IT WENT OFF. DO THE THING')
+    };
+  }, 1000);
+};
+
 exports.clockModule = Clock;
