@@ -1,27 +1,29 @@
-# _Ping Pong_
+# _Alarm Clock_
 
-#### _A ping pong web app_
+#### _An alarm clock web app_
 
-#### By _**Sean Peterson**_
+#### By _**Sean Peterson & Erica Wright**_
 https://github.com/Sean-Peterson
+https://github.com/ericaw21
 
 ## Description
 
-_A web app that will turn a number into a game of ping pong._
+_A web app that will display current time and allow users to set and view alarms._
 
 ## Specs
 
-* _Scope: Take a user inputted number, make into numbered array from 1 to X, change numbers evenly divisible by 3 and 5 to ping-pong, change numbers evenly divisible by 5 to pong, and change numbers evenly divisible by 3 to ping. After the transformation, display results back to user in a list form._
-* _Input: User inputted whole integer. Output: X_
-* _Convert X into array numbers counting from 1 to X. Output: [1 to X]_
-* _Input: y = [1 to X] Output: if n of Y % 3 = 0 and n of Y % 5 = 0 then replace with ping-pong_
-* _Input: y = [1 to X] Output: if n of Y % 5 = 0 then replace with pong_
-* _Input: y = [1 to X] Output: if n of Y % 3 = 0 then replace with ping_
-* _Input: array of numbers and words. Output: List of numbers and words from 1 to X with replaced values._
+|Behavior|Output|
+|--------|------|
+|Open index to view time| "Current time: 2017-03-14 10:15:10"|
+|Click "Set Alarm" and enter alarm time (eg. "2017-03-14 10:20:00")|At alarm time, page will display "The time is now 10:20" and change colors/view|
+
 
 ## Setup/Installation Requirements
 
-* _Clone this repository and open index.html in your browser. If you would rather use the commandline then change directory into the top level of the cloned repository and then, for mac run the following command in your terminal: open index.html. For a PC run start index.html"._
+* Set up your unique time API key by visiting https://timezonedb.com/ and signing up for a free account. Create a `.env` file in the top level project directory and enter in your API key as: `exports.apiKey = 'yourKeyHere';`.
+* Run `npm install` and `bower install` to install all dependencies as listed in the package.json and bower.json files for project.
+* Run command `gulp serve` to start local server.
+* Open `index.html` in web browser (Chrome recommended).
 
 ## Known Bugs
 
@@ -39,4 +41,4 @@ _jQuery_
 
 ### License
 
-Copyright (c) 2017 **_Sean Peterson_**
+Copyright (c) 2017 **_Sean Peterson & Erica Wright_**
